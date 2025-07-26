@@ -273,7 +273,7 @@ legend {
     }
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 426px) and (max-width: 1024px) {
     .contenido > * {
         margin: 0rem 4rem;
     }
