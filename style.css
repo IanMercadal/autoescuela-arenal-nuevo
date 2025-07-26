@@ -24,7 +24,7 @@ body {
 
 body,
 .contenido {
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
 }
@@ -175,7 +175,6 @@ legend {
 
     .header {
         flex-direction: column !important;
-        position: sticky;
     }
 
     .navigation {
@@ -211,7 +210,8 @@ legend {
     }
 
     .footer {
-        flex-direction: column-reverse !important;
+        flex-direction: column-reverse;
+        margin-bottom: 1.2rem;
     }
 }
 
@@ -285,6 +285,10 @@ legend {
         margin-bottom: 40rem !important;
     }
 
+    #aviso-legal {
+        margin-bottom: 5rem !important;
+    }
+
     body {
         font-size: 90%;
     }
@@ -295,6 +299,10 @@ legend {
 
     .contenido > * {
         padding: 0rem !important;
+    }
+
+    .grid-two-columns {
+        width: 100%;
     }
 }
 
