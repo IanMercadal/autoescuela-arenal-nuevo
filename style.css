@@ -175,6 +175,7 @@ legend {
 
     .header {
         flex-direction: column !important;
+        position: sticky;
     }
 
     .navigation {
