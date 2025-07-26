@@ -1,301 +1,328 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="theme-color" content="#6b99bd">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
 
+  <title>Autoescuela Arenal</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
-        rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200..1000&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="icon" type="image/x-icon" href="./icon.svg">
-    <title>Autoescuela Arenal</title>
+  <!-- Styles & Favicon -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="./icon.svg">
 </head>
-
 <body>
 
-    <!-- Video de fondo -->
-    <video id="video-fondo" autoplay muted loop playsinline>
-        <source src="video-fondo.webm" type="video/webm">
-        Tu navegador no soporta el formato de video.
-    </video>
+  <!-- Loader (optional enhancement for UX) -->
+  <div id="loader">
+    <div class="spinner"></div>
+    <p>Cargando web</p>
+  </div>
 
-    <div class="contenido">
-        <header class="header">
-            <img class="logo" src="./logo.png">
-            <nav class="navigation flex-row">
-                <a href="#inicio" class="nav-link-option">Inicio</a>
-                <a href="#servicios" class="nav-link-option">Servicios</a>
-                <a href="#test" class="nav-link-option">Test</a>
-                <a href="#ubicacion" class="nav-link-option">Ubicación</a>
-            </nav>
-            
-            <nav class="navigation-mobile flex-column">
-                <a href="#inicio-mobile">Inicio</a>
-                <a href="#servicios-mobile">Servicios</a>
-                <a href="#test-mobile">Test</a>
-                <a href="#ubicacion-mobile">Ubicación</a>
-            </nav>
-        </header>
+  <!-- Video Background -->
+  <video id="video-fondo" autoplay muted loop playsinline>
+    <source src="video-fondo.webm" type="video/webm">
+    Tu navegador no soporta el formato de video.
+  </video>
 
-        <main class="main">
-            <div id="inicio" class="content">
-                <div class="left-column">
-                    <h1 id="inicio-mobile">Autoescuela Arenal</h1>
-                    <h3>Información</h3>
-                    <p>Ofreciendo a sus clientes la mejor calidad y el mejor servicio, siempre a la vanguardia de los
-                        medios técnicos y educativos. Amplios horarios de teórica con explicación de profesores
-                        expertos. Y por supuesto, disponemos de profesores de práctica altamente cualificados y
-                        experimentados. Nuestros alumnos son nuestro mejor aval. </p>
+  <!-- Main Content -->
+  <div class="contenido hidden" id="contenido">
+    <header class="header">
+        <img class="logo" src="./logo.png">
+        <nav class="navigation flex-row">
+            <a href="#inicio" class="nav-link-option">Inicio</a>
+            <a href="#servicios" class="nav-link-option">Servicios</a>
+            <a href="#test" class="nav-link-option">Test</a>
+            <a href="#ubicacion" class="nav-link-option">Ubicación</a>
+        </nav>
+        
+        <nav class="navigation-mobile flex-column">
+            <a href="#inicio-mobile">Inicio</a>
+            <a href="#servicios-mobile">Servicios</a>
+            <a href="#test-mobile">Test</a>
+            <a href="#ubicacion-mobile">Ubicación</a>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div id="inicio" class="content">
+            <div class="left-column">
+                <h1 id="inicio-mobile">Autoescuela Arenal</h1>
+                <h3>Información</h3>
+                <p>Ofreciendo a sus clientes la mejor calidad y el mejor servicio, siempre a la vanguardia de los
+                    medios técnicos y educativos. Amplios horarios de teórica con explicación de profesores
+                    expertos. Y por supuesto, disponemos de profesores de práctica altamente cualificados y
+                    experimentados. Nuestros alumnos son nuestro mejor aval. </p>
+            </div>
+        </div>
+
+        <div id="servicios" class="content">
+            <div class="left-column">
+                <h2 id="servicios-mobile">Servicios</h2>
+                <p>Te ofrecemos una formación de alta calidad con profesores titulados y experimentados, tecnología
+                    de vanguardia y horarios flexibles adaptados a tus necesidades. Impartimos cursos teóricos
+                    innovadores y exclusivos que facilitan una rápida comprensión y alto índice de aprobados, con
+                    clases durante todo el día, test por ordenador similares a los del examen, y acceso a test en
+                    línea. En la parte práctica, contarás con vehículos modernos, clases en todo tipo de vías y
+                    condiciones, además de circuitos para motos y ciclomotores.</p>
+
+                <div class="grid-three-columns">
+                    <fieldset class="card">
+                        <legend>Clases</legend>
+                        <div class="circle">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32"  height="32" viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-pencil"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M10 18l5 -5a1.414 1.414 0 0 0 -2 -2l-5 5v2h2z" /></svg>
+                        </div>
+                        <p>Ofrecemos clases teóricas y prácticas</p>
+                    </fieldset>
+
+                    <fieldset class="card">
+                        <legend>Permisos</legend>
+                        <div class="circle">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32"  height="32" viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-id-badge-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 12h3v4h-3z" /><path d="M10 6h-6a1 1 0 0 0 -1 1v12a1 1 0 0 0 1 1h16a1 1 0 0 0 1 -1v-12a1 1 0 0 0 -1 -1h-6" /><path d="M10 3m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v3a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z" /><path d="M14 16h2" /><path d="M14 12h4" /></svg>
+                        </div>
+                        <p>Ofrecemos permisos AM, A1, A2, A y B, cursos intensivos de turismo .</p>
+                    </fieldset>
+
+                    <fieldset class="card">
+                        <legend>Contacto</legend>
+                        <div class="circle">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32"  height="32" viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-phone"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" /></svg>
+                        </div>
+                        <p>Si tienes preguntas, inquietudes o necesitas más información, no dudes en contactarnos.</p>
+                    </fieldset>
                 </div>
             </div>
+        </div>
 
-            <div id="servicios" class="content">
-                <div class="left-column">
-                    <h2 id="servicios-mobile">Servicios</h2>
-                    <p>Te ofrecemos una formación de alta calidad con profesores titulados y experimentados, tecnología
-                        de vanguardia y horarios flexibles adaptados a tus necesidades. Impartimos cursos teóricos
-                        innovadores y exclusivos que facilitan una rápida comprensión y alto índice de aprobados, con
-                        clases durante todo el día, test por ordenador similares a los del examen, y acceso a test en
-                        línea. En la parte práctica, contarás con vehículos modernos, clases en todo tipo de vías y
-                        condiciones, además de circuitos para motos y ciclomotores.</p>
+        <div id="test" class="content">
+            <div class="left-column">
+                <h2 id="test-mobile">Tests</h2>
+                <p>A continuación encontrarás dos enlaces: uno te llevará a nuestra plataforma de tests online para que practiques, y el otro te permitirá consultar tus resultados directamente en la web de la DGT. </p>
 
-                    <div class="grid-three-columns">
-                        <fieldset class="card">
-                            <legend>Clases</legend>
-                            <div class="circle">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32"  height="32" viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-pencil"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M10 18l5 -5a1.414 1.414 0 0 0 -2 -2l-5 5v2h2z" /></svg>
+                <div class="grid-two-columns">
+                    <fieldset class="card-xl">
+                        <legend class="text-align-center">Test Online</legend>
+                        <p>Practica para tu examen de manejo desde casa con nuestra plataforma online. Accede a simulacros con retroalimentación instantánea, la herramienta ideal para perfeccionar tus habilidades. </p>
+                        <a href="#" class="nav-link-option">Enlace</a>
+                    </fieldset>
+
+                    <fieldset class="card-xl">
+                        <legend class="text-align-center">Resultado DGT</legend>
+                        <p>¡Es el momento de conocer los resultados de tu examen de la DGT! Accede de manera rápida y sencilla al portal oficial de la Dirección General de Tráfico para comprobar el resultado del test o examen práctico realizado.</p>
+                        <a href="#" class="nav-link-option">Enlace</a>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+
+        <div id="ubicacion" class="content">
+            <div class="left-column">
+                <h2 id="ubicacion-mobile">Ubicación</h2>
+                <p>Contamos con dos centros estratégicamente ubicados para tu comodidad, lo que te permite elegir el
+                    que mejor se adapte a tu rutina diaria. Ambos ofrecen las mismas instalaciones modernas y la
+                    calidad de enseñanza que nos caracteriza.</p>
+
+                <div class="grid-two-columns">
+                    <fieldset class="card-xl">
+                        <legend class="text-align-center">Sección 1</legend>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3078.383425188627!2d2.750698876406113!3d39.50583511057463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1297964600d4e859%3A0x2053cae5a644362b!2sAutoescuela%20Arenal!5e0!3m2!1ses!2ses!4v1695566015384!5m2!1ses!2ses"
+                            width="100%" height="250" style="border:0;border-radius: 6px;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="contact-info">
+                            <div class="flex-row-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin"
+                                    width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+                                    <path
+                                        d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z">
+                                    </path>
+                                </svg>
+                                <p><b>Dirección</b> C.-Cannas , 33 Palma</p>
                             </div>
-                            <p>Ofrecemos clases teóricas y prácticas</p>
-                        </fieldset>
-    
-                        <fieldset class="card">
-                            <legend>Permisos</legend>
-                            <div class="circle">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32"  height="32" viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-id-badge-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 12h3v4h-3z" /><path d="M10 6h-6a1 1 0 0 0 -1 1v12a1 1 0 0 0 1 1h16a1 1 0 0 0 1 -1v-12a1 1 0 0 0 -1 -1h-6" /><path d="M10 3m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v3a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z" /><path d="M14 16h2" /><path d="M14 12h4" /></svg>
+                            <div class="flex-row-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone"
+                                    width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2">
+                                    </path>
+                                </svg>
+                                <p><b>Teléfono:</b> 971 26 43 51 – 656 95 49 31</p>
                             </div>
-                            <p>Ofrecemos permisos AM, A1, A2, A y B, cursos intensivos de turismo .</p>
-                        </fieldset>
-    
-                        <fieldset class="card">
-                            <legend>Contacto</legend>
-                            <div class="circle">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32"  height="32" viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-phone"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" /></svg>
+                            <div class="flex-row-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail"
+                                    width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z">
+                                    </path>
+                                    <path d="M3 7l9 6l9 -6"></path>
+                                </svg>
+                                <p><b>Email:</b> info@aearenal.com</p>
                             </div>
-                            <p>Si tienes preguntas, inquietudes o necesitas más información, no dudes en contactarnos.</p>
-                        </fieldset>
-                    </div>
-                </div>
-            </div>
+                        </div>
+                    </fieldset>
 
-            <div id="test" class="content">
-                <div class="left-column">
-                    <h2 id="test-mobile">Tests</h2>
-                    <p>A continuación encontrarás dos enlaces: uno te llevará a nuestra plataforma de tests online para que practiques, y el otro te permitirá consultar tus resultados directamente en la web de la DGT. </p>
+                    <fieldset class="card-xl">
+                        <legend class="text-align-center">Sección 2</legend>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1295.2467067613397!2d2.751091035998748!3d39.455021760169075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12979756c8941715%3A0xc3459687f31336b5!2sArenal%20autoescuela!5e0!3m2!1ses!2ses!4v1695566464195!5m2!1ses!2ses"
+                            width="100%" height="250" style="border:0;border-radius: 6px;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="contact-info">
+                            <div class="flex-row-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin"
+                                    width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+                                    <path
+                                        d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z">
+                                    </path>
+                                </svg>
+                                <p><b>Dirección</b> C.-Imperial , Local 31 Palma</p>
 
-                    <div class="grid-two-columns">
-                        <fieldset class="card-xl">
-                            <legend class="text-align-center">Test Online</legend>
-                            <p>Practica para tu examen de manejo desde casa con nuestra plataforma online. Accede a simulacros con retroalimentación instantánea, la herramienta ideal para perfeccionar tus habilidades. </p>
-                            <a href="#" class="nav-link-option">Enlace</a>
-                        </fieldset>
-
-                        <fieldset class="card-xl">
-                            <legend class="text-align-center">Resultado DGT</legend>
-                            <p>¡Es el momento de conocer los resultados de tu examen de la DGT! Accede de manera rápida y sencilla al portal oficial de la Dirección General de Tráfico para comprobar el resultado del test o examen práctico realizado.</p>
-                            <a href="#" class="nav-link-option">Enlace</a>
-                        </fieldset>
-                    </div>
-                </div>
-            </div>
-
-            <div id="ubicacion" class="content">
-                <div class="left-column">
-                    <h2 id="ubicacion-mobile">Ubicación</h2>
-                    <p>Contamos con dos centros estratégicamente ubicados para tu comodidad, lo que te permite elegir el
-                        que mejor se adapte a tu rutina diaria. Ambos ofrecen las mismas instalaciones modernas y la
-                        calidad de enseñanza que nos caracteriza.</p>
-
-                    <div class="grid-two-columns">
-                        <fieldset class="card-xl">
-                            <legend class="text-align-center">Sección 1</legend>
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3078.383425188627!2d2.750698876406113!3d39.50583511057463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1297964600d4e859%3A0x2053cae5a644362b!2sAutoescuela%20Arenal!5e0!3m2!1ses!2ses!4v1695566015384!5m2!1ses!2ses"
-                                width="100%" height="250" style="border:0;border-radius: 6px;" allowfullscreen=""
-                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            <div class="contact-info">
-                                <div class="flex-row-start">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin"
-                                        width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000"
-                                        fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                        <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
-                                        <path
-                                            d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z">
-                                        </path>
-                                    </svg>
-                                    <p><b>Dirección</b> C.-Cannas , 33 Palma</p>
-                                </div>
-                                <div class="flex-row-start">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone"
-                                        width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000"
-                                        fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                        <path
-                                            d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2">
-                                        </path>
-                                    </svg>
-                                    <p><b>Teléfono:</b> 971 26 43 51 – 656 95 49 31</p>
-                                </div>
-                                <div class="flex-row-start">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail"
-                                        width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000"
-                                        fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                        <path
-                                            d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z">
-                                        </path>
-                                        <path d="M3 7l9 6l9 -6"></path>
-                                    </svg>
-                                    <p><b>Email:</b> info@aearenal.com</p>
-                                </div>
                             </div>
-                        </fieldset>
-
-                        <fieldset class="card-xl">
-                            <legend class="text-align-center">Sección 2</legend>
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1295.2467067613397!2d2.751091035998748!3d39.455021760169075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12979756c8941715%3A0xc3459687f31336b5!2sArenal%20autoescuela!5e0!3m2!1ses!2ses!4v1695566464195!5m2!1ses!2ses"
-                                width="100%" height="250" style="border:0;border-radius: 6px;" allowfullscreen=""
-                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            <div class="contact-info">
-                                <div class="flex-row-start">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin"
-                                        width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000"
-                                        fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                        <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
-                                        <path
-                                            d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z">
-                                        </path>
-                                    </svg>
-                                    <p><b>Dirección</b> C.-Imperial , Local 31 Palma</p>
-
-                                </div>
-                                <div class="flex-row-start">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone"
-                                        width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000"
-                                        fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                        <path
-                                            d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2">
-                                        </path>
-                                    </svg>
-                                    <p><b>Teléfono:</b> 971 26 43 51 – 656 95 49 31</p>
-                                </div>
-                                <div class="flex-row-start">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail"
-                                        width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000"
-                                        fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                        <path
-                                            d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z">
-                                        </path>
-                                        <path d="M3 7l9 6l9 -6"></path>
-                                    </svg>
-                                    <p><b>Email:</b> info@aearenal.com</p>
-                                </div>
+                            <div class="flex-row-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone"
+                                    width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2">
+                                    </path>
+                                </svg>
+                                <p><b>Teléfono:</b> 971 26 43 51 – 656 95 49 31</p>
                             </div>
-                        </fieldset>
-                    </div>
+                            <div class="flex-row-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail"
+                                    width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z">
+                                    </path>
+                                    <path d="M3 7l9 6l9 -6"></path>
+                                </svg>
+                                <p><b>Email:</b> info@aearenal.com</p>
+                            </div>
+                        </div>
+                    </fieldset>
                 </div>
             </div>
+        </div>
 
-            <div id="informacion" class="content">
-                <div class="left-column">
-                    <h2 id="">Información</h2>
-                    <p>Parágrafo para añadir librerias autores de videos o imágenes</p>
-                </div>
+        <div id="informacion" class="content">
+            <div class="left-column">
+                <h2 id="">Información</h2>
+                <p>Parágrafo para añadir librerias autores de videos o imágenes</p>
             </div>
+        </div>
 
-            <div id="aviso-legal" class="content">
-                <div class="left-column">
-                    <h1>Autoescuela Arenal</h1>
-                    <h2>Aviso Legal y Política de Privacidad</h2>
+        <div id="aviso-legal" class="content">
+            <div class="left-column">
+                <h1>Autoescuela Arenal</h1>
+                <h2>Aviso Legal y Política de Privacidad</h2>
 
-                    <p>Este sitio web tiene un carácter meramente informativo. Su finalidad es ofrecer información
-                        general
-                        sobre los servicios o actividades de la entidad responsable del dominio.</p>
+                <p>Este sitio web tiene un carácter meramente informativo. Su finalidad es ofrecer información
+                    general
+                    sobre los servicios o actividades de la entidad responsable del dominio.</p>
 
-                    <p>El sitio no recopila, almacena ni trata datos personales de los visitantes. No se utilizan
-                        formularios de contacto, sistemas de registro ni se realiza seguimiento individual a través de
-                        cookies con fines estadísticos o publicitarios.</p>
+                <p>El sitio no recopila, almacena ni trata datos personales de los visitantes. No se utilizan
+                    formularios de contacto, sistemas de registro ni se realiza seguimiento individual a través de
+                    cookies con fines estadísticos o publicitarios.</p>
 
-                    <p>El acceso y navegación por el sitio implica la aceptación de los términos aquí descritos. La
-                        entidad
-                        responsable se reserva el derecho a modificar el contenido del sitio y del presente aviso en
-                        cualquier momento y sin previo aviso.</p>
+                <p>El acceso y navegación por el sitio implica la aceptación de los términos aquí descritos. La
+                    entidad
+                    responsable se reserva el derecho a modificar el contenido del sitio y del presente aviso en
+                    cualquier momento y sin previo aviso.</p>
 
-                    <p>Si tienes alguna duda sobre el contenido publicado o sobre este aviso legal, puedes ponerte en
-                        contacto con nosotros a través de los medios de contacto indicados (teléfono, correo electrónico
-                        o
-                        dirección física si aplica).</p>
+                <p>Si tienes alguna duda sobre el contenido publicado o sobre este aviso legal, puedes ponerte en
+                    contacto con nosotros a través de los medios de contacto indicados (teléfono, correo electrónico
+                    o
+                    dirección física si aplica).</p>
 
-                    <p>Última actualización: Julio 2025</p>
-                </div>
+                <p>Última actualización: Julio 2025</p>
             </div>
-        </main>
+        </div>
+    </main>
 
-        <footer class="footer">
-            <div class="flex-row">
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                    fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
-                    <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
-                    <path d="M16.5 7.5v.01" />
-                </svg>
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                    fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
-                </svg>
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                    fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
-                    <path
-                        d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
-                </svg>
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                    fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-mail">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
-                    <path d="M3 7l9 6l9 -6" />
-                </svg>
-            </div>
+    <footer class="footer">
+        <div class="flex-row">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+                <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                <path d="M16.5 7.5v.01" />
+            </svg>
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+            </svg>
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+                <path
+                    d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+            </svg>
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-mail">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+                <path d="M3 7l9 6l9 -6" />
+            </svg>
+        </div>
 
-            <p>© 2025 Example Corp. All rights reserved.</p>
+        <p>© 2025 Example Corp. All rights reserved.</p>
 
-            <nav class="flex-row">
-                <a href="#informacion" class="nav-link-option-min">Información</a>
-                <a href="#aviso-legal" class="nav-link-option-min">Aviso Legal</a>
-            </nav>
-        </footer>
-    </div>
+        <nav class="flex-row">
+            <a href="#informacion" class="nav-link-option-min">Información</a>
+            <a href="#aviso-legal" class="nav-link-option-min">Aviso Legal</a>
+        </nav>
+    </footer>
+  </div>
 
-    <script src="script.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const video = document.getElementById("video-fondo");
+      const loader = document.getElementById("loader");
+      const content = document.getElementById("contenido");
+
+      if (video.readyState >= 3) {
+
+        setTimeout(() => {
+            console.log("Video cargado");
+            loader.style.display = "none";
+            content.classList.remove("hidden");
+        }, 5000);
+
+      } else {
+        video.addEventListener("canplaythrough", () => {
+          loader.style.display = "none";
+          content.classList.remove("hidden");
+        });
+      }
+    });
+  </script>
 
 </body>
-
 </html>
