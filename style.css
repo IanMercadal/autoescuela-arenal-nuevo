@@ -113,10 +113,12 @@ legend {
 
 .card {
     height: 200px;
+    backdrop-filter: blur(14px);
 }
 
 .card-xl {
     height: 100%;
+    backdrop-filter: blur(14px);
 }
 
 .bg-white {
